@@ -1,4 +1,4 @@
-import CategoryCard from "@/components/CategoryCard";
+import CategoryCard from "@/components/cards/CategoryCard";
 import { categories } from "@/data/products";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";

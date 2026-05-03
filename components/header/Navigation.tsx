@@ -1,6 +1,8 @@
-import { Search, ChevronDown, Store, ShoppingCart, User } from "lucide-react";
+import { User } from "lucide-react";
 import Link from "next/link";
 import NavProductsList from "./NavProductsList";
+import ShopCartIcon from "./ShopCartIcon";
+import SearchInput from "./SearchInput";
 
 export default function Navigation() {
   return (
@@ -17,30 +19,10 @@ export default function Navigation() {
               </span>
             </div>
           </Link>
-          <div className="hidden md:block flex grow max-w-lg mx-8">
-            <form className="group relative">
-              <input
-                type="text"
-                placeholder="Search for products..."
-                className="w-full bg-white/10 border border-white/20 rounded-full py-2 pl-4 pr-10 text-white placeholder:text-white/60 focus:outline-none
-                focus:ring-2 focus:ring-[#edae49] focus:border-transparent transition-all"
-              />
-              <button
-                type="submit"
-                className="absolute right-1 top-1/2 -translate-y-1/2 text-white/70 p-1.5 hover:text-white rounded-full transition-colors"
-              >
-                <Search className="text-xl" />
-              </button>
-            </form>
-          </div>
+          <SearchInput />
           <div className="hidden md:flex items-center space-x-4">
             <NavProductsList />
-            <Link
-              href="/carts"
-              className="text-white flex justify-center items-center hover:text-[#edae49] rounded-full p-2 hover:bg-white/10 transtion-colors"
-            >
-              <ShoppingCart className="text-2xl" />
-            </Link>
+            <ShopCartIcon />
             <Link
               href="/login"
               className="text-white flex justify-center items-center hover:text-[#edae49] rounded-full p-2 hover:bg-white/10 transtion-colors"

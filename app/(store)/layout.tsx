@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/header/Navigation";
 
 export default function StoreLayout({
   children,

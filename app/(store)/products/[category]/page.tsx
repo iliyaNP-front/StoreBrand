@@ -1,5 +1,5 @@
-import ProductCard from "@/components/ProductCard";
-import { Product, products, categories } from "@/data/products";
+import ProductCard from "@/components/cards/ProductCard";
+import { products, categories } from "@/data/products";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 

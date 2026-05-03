@@ -34,21 +34,21 @@ export const categories: Category[] = [
   {
     name: "Phones",
     slug: "phone",
-    color: "#3B82F6",
+    color: "#4F46E5",
     description: "Smartphones from leading brands with the latest technology.",
     icon: Smartphone,
   },
   {
     name: "Laptops",
     slug: "laptop",
-    color: "#8B5CF6",
+    color: "#f02666",
     description: "High‑performance laptops for work, gaming, and everyday use.",
     icon: Laptop,
   },
   {
     name: "TVs",
     slug: "tv",
-    color: "#F59E0B",
+    color: "#e8b235",
     description: "Smart TVs with stunning picture quality and modern features.",
     icon: Tv,
   },
@@ -62,7 +62,7 @@ export const categories: Category[] = [
   {
     name: "Cameras",
     slug: "camera",
-    color: "#EF4444",
+    color: "#de162d",
     description: "Professional and beginner cameras for photography and video.",
     icon: Camera,
   },
@@ -90,7 +90,7 @@ export const categories: Category[] = [
   {
     name: "Speakers",
     slug: "speaker",
-    color: "#F97316",
+    color: "#f26d1f",
     description: "Portable and home speakers with powerful sound.",
     icon: Speaker,
   },

@@ -1,13 +1,14 @@
 import { Product } from "@/data/products";
-import { ShoppingCart } from "lucide-react";
+
 import Link from "next/link";
+import ProductShopCard from "./ProductShopCart";
 
 export default function ProductCard({
   product,
   categoryColor,
 }: {
   product: Product;
-  categoryColor: string | null;
+  categoryColor: string | undefined;
 }) {
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all group flex flex-col">
@@ -39,12 +40,7 @@ export default function ProductCard({
               View Details
             </Link>
 
-            <button
-              className="w-10 h-10 rounded-full text-white flex items-center justify-center cursor-pointer"
-              style={{ backgroundColor: categoryColor || "#003d5b" }}
-            >
-              <ShoppingCart />
-            </button>
+            <ProductShopCard id={product.id} color={categoryColor} />
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { products } from "@/data/products";
-import ProductCard from "./ProductCard";
+import ProductCard from "../cards/ProductCard";
 
 export default function LatestProducts() {
   return (
@@ -18,19 +18,19 @@ export default function LatestProducts() {
             View All Products
             <ArrowRight
               size={18}
-              className="opacity-70 group-hover:translate-x-1 transition-transform"
+              className="opacity-70 hidden sm:flex group-hover:translate-x-1 transition-transform"
             />
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 pt-5 gap-5 lg:grid-cols-3 border-t border-gray-100">
-          {products
+          {[...products]
             .reverse()
             .slice(0, 12)
-            .map((products) => (
+            .map((product) => (
               <ProductCard
-                key={products.id}
-                product={products}
-                categoryColor={null}
+                key={product.id}
+                product={product}
+                categoryColor={undefined}
               />
             ))}
         </div>
