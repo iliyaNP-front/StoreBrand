@@ -11,6 +11,8 @@ import {
   Monitor,
 } from "lucide-react";
 
+import { LucideIcon } from "lucide-react";
+
 export type Product = {
   id: string;
   name: string;
@@ -20,7 +22,13 @@ export type Product = {
   category: string;
 };
 
-import { LucideIcon } from "lucide-react";
+export type PaymentMethod = {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  color: string;
+};
 
 export type Category = {
   name: string;
@@ -29,6 +37,30 @@ export type Category = {
   description: string;
   icon: LucideIcon;
 };
+
+export const paymentMethod: PaymentMethod[] = [
+  {
+    id: "1",
+    name: "Credit Card",
+    description: "Visa, Mastercard, American Express",
+    image: "/icons/credit-card-solid-full.svg",
+    color: "#ee3352",
+  },
+  {
+    id: "2",
+    name: "PayPal",
+    description: "Visa, Mastercard, American Express",
+    image: "/icons/paypal-brands-solid-full.svg",
+    color: "#3b82f6",
+  },
+  {
+    id: "3",
+    name: "Apple",
+    description: "Fast and secure checkout with Apple",
+    image: "/icons/apple-brands-solid-full.svg",
+    color: "#d1d5db",
+  },
+];
 
 export const categories: Category[] = [
   {

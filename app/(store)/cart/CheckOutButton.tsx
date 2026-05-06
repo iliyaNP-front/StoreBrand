@@ -17,7 +17,7 @@ export default function CheckOutButton({ isEmpty }: { isEmpty: boolean }) {
 
   return (
     <Link
-      href="/CheckOut"
+      href="/checkout"
       className={`${baseStyles} bg-[#ee3352] text-white group hover:shadow-lg hover:scale-105 duration-500 transition-all`}
     >
       Proceed to Checkout

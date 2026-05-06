@@ -17,6 +17,10 @@ type Action =
 
 type MyContextValue = {
   shopCart: CartProduct[];
+  total: number;
+  subTotal: number;
+  tax: number;
+  shipping: number;
   AddToShopCart: (id: string, quantity: number) => void;
   updateQuantity: (id: string, quantity: number) => void;
   DeleteProduct: (id: string) => void;
@@ -77,6 +81,14 @@ export default function MyProvider({
   children: React.ReactNode;
 }) {
   const [state, dispatch] = useReducer(cartReducer, { shopCart: [] });
+  const subTotal = state.shopCart.reduce(
+    (prev, product) => prev + product.price * product.quantity,
+    0,
+  );
+
+  const tax = subTotal * 0.05;
+  const shipping = 9.99;
+  const total = subTotal + shipping + tax;
 
   function AddToShopCart(id: string, quantity: number) {
     dispatch({ type: "ADD", id, quantity });
@@ -101,6 +113,10 @@ export default function MyProvider({
         updateQuantity,
         DeleteProduct,
         DeleteAllProduct,
+        tax,
+        shipping,
+        subTotal,
+        total,
       }}
     >
       {children}
