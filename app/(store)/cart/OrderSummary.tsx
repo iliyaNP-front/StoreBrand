@@ -9,7 +9,7 @@ export default function OrderSummary() {
   const isEmpty = context.shopCart.length === 0;
 
   return (
-    <div className="w-2/6 h-[70vh] shadow-xl rounded-lg p-6 flex flex-col justify-between">
+    <div className="lg:w-2/6 h-[70vh] shadow-xl rounded-lg p-6 flex flex-col justify-between">
       <div>
         <p className="text-[#003d5b] font-bold text-2xl mb-6">Order Summary</p>
 

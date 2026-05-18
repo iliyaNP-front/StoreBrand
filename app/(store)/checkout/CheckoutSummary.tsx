@@ -8,7 +8,7 @@ import { Lock } from "lucide-react";
 export default function CheckoutSummary() {
   const context = useMyContext();
   return (
-    <div className="w-2/6 min-h-[70vh] shadow-xl rounded-lg p-6 flex flex-col justify-between bg-white">
+    <div className="lg:w-2/6 min-h-[70vh] shadow-xl rounded-lg p-6 flex flex-col justify-between bg-white">
       <div>
         <p className="text-[#003d5b] font-bold text-2xl mb-6">Order Summary</p>
         <div className="flex flex-col gap-3 border-b pb-3 border-[#003d5b]">
@@ -28,7 +28,7 @@ export default function CheckoutSummary() {
 
         <div className="flex items-center justify-between py-3 mb-5 text-[#003d5b]">
           <p className="text-xl font-medium">Total</p>
-          <p className="font-medium">${context.total}</p>
+          <p className="font-medium">${context.total.toFixed(2)}</p>
         </div>
       </div>
       <div>

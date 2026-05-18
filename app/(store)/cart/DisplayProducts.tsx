@@ -15,16 +15,16 @@ export default function DisplayProducts() {
         {context.shopCart.map((product) => (
           <div
             key={product.id}
-            className="w-full py-3 flex items-center justify-between border-b border-gray-100"
+            className="w-full py-3 flex sm:flex-row flex-col sm:items-center justify-between border-b border-gray-100 gap-4"
           >
             <div className="flex items-center gap-3">
-              <div className="w-15 h-15 bg-gray-100 rounded-sm"></div>
-              <h4 className="text-[#003d5b] font-bold line-clamp-1">
+              <div className="w-15 h-15 bg-gray-100 rounded-sm lg:flex hidden"></div>
+              <h4 className="text-[#003d5b] font-bold text-left line-clamp-1">
                 {product.name}
               </h4>
             </div>
-            <div className="flex items-center gap-20">
-              <p className="text-[#00798c] font-medium text-center ">
+            <div className="flex items-center justify-end sm:gap-20">
+              <p className="text-[#00798c] font-medium hidden md:flex">
                 ${product.price}
               </p>
               <div className="flex">
